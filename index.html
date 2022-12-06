@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>  <!-- vue cdn-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script> <!-- axios cdn lib api-->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+<div id="webapp">
+
+    <ul>
+        <li v-for="email in emails" v-show="emails.length === 10">{{email}}</li>
+    </ul>
+</div>
+
+
+
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
