@@ -12,17 +12,16 @@
 i{
     cursor: pointer;
 }
+
+
+
 body{
-	margin: 0;
-	padding: 0;
 	background-color: #0e6cc4;
-	overflow-x:hidden;
-	overflow-y:hidden;
+
 }
+/* bg animated */
 
 /*waves****************************/
-
-
 .box {
 	position: fixed;
 	top: 0;
