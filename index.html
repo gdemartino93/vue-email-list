@@ -14,43 +14,31 @@
 <body>
     
 <div id="webapp">
-
-<header>
-    <h1 class="p-3">Lista Email</h1>
-</header>
-<body>
-    <div class="card" style="width: 18rem;">
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item d-flex align-items-center justify-content-between" v-for="email in emails" v-show="emails.length === nrEmail" v-if="emails.length > 0">{{email}}
-            <a><i class="fa-solid fa-trash" @Click="deleteEmail"></i></a>
-            </li>
-            <!-- v-show="emails.length === 10 per bonus" -->
-            <li class="list-group-item d-flex align-items-center justify-content-between fw-bold fs-3" v-show="emails.length === 0" v-else="emails.lenth == 0">Non ci sono email</li>
-        </ul>
-    </div>
-    <div class="row my-3">
-        <div class="col12 d-flex flex-column gap-3">
-            <p class="fw-bold">Inserisci il numero di email da generare:</p>
-            <button @Click="randomEmail(nrEmail)" class="btn btn-success">Genera nuove email</button>
-
-            <input class="form-control" type="text" placeholder="Default input" aria-label="default input example" v-model="nrEmail">
-            <button @Click="deleteAll" class="btn btn-danger">Cancella tutte le email</button>
-
-
+    <header>
+        <h1 class="p-3">Lista Email</h1>
+    </header>
+    <main>
+        <div class="card" style="width: 18rem;">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item d-flex align-items-center justify-content-between" v-for="email in emails" v-show="emails.length === nrEmail" v-if="emails.length > 0">{{email}}
+                    <a><i class="fa-solid fa-trash" @Click="deleteEmail"></i></a>
+                </li>
+                <li class="list-group-item d-flex align-items-center justify-content-between fw-bold fs-3" v-show="emails.length === 0" v-else="emails.lenth == 0">Non ci sono email</li>
+            </ul>
         </div>
-  
-    </div>
-   
-</body>
+        <div class="row my-3">
+            <div class="col12 d-flex flex-column gap-3">
+                <p class="fw-bold">Inserisci il numero di email da generare:</p>
+                <button @Click="randomEmail(nrEmail)" class="btn btn-success">Genera nuove email</button>
 
+                <input class="form-control" type="text" placeholder="Default input" aria-label="default input example" v-model="nrEmail">
+                <button @Click="deleteAll" class="btn btn-danger">Cancella tutte le email</button>
+            </div>
+        </div> 
+    </main>
 
-
- 
 </div>
-
-
-
-    
     <script src="js/main.js"></script>
+
 </body>
 </html>
